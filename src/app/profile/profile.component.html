@@ -1,0 +1,45 @@
+
+<div class="profile-page">
+  <div class="main main-raised"> 
+		<div class="profile-content">
+            <div class="container"  >
+                <div class="row">
+        	           <div class="profile">
+	                        <div class="avatar">
+                                <img id="img3" [src]="img3" alt="profile">  
+                            </div>
+	                        <div class="name" >
+	                            <h3 class="title"> {{_userService.dataService.firstName}}  {{_userService.dataService.lastName}} </h3>
+								<h6>Patient</h6>
+								
+	                        </div>
+	                    </div>
+                </div>
+                <div class="description text-center">
+                
+                    <div class="container p-3 ">
+                        <div class="row">
+                          <div class="col-sm  p-3 my-3 border">
+                            <h4>user ID</h4>
+                            {{_userService.dataService.userId}}
+                          </div>
+                          <div class="col-sm  p-3 my-3 border">
+                            <h4>e-mail</h4>
+                            {{_userService.dataService.email}}
+                          </div>
+                          <!-- <div class="col-sm  p-3 my-3 border">
+                            <h4>date of birth</h4>
+                            01/01/1996
+                          </div> -->
+                        </div>
+                </div>
+      		</div>
+          </div>
+        </div>
+	</div>
+
+</div>
+
+
+
+

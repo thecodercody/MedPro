@@ -1,0 +1,42 @@
+
+<!-- Pills navs -->
+<div id="nav">
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a routerLink ="../logIn" class="nav-link active" id="tab-login" data-mdb-toggle="pill" role="tab"
+        aria-controls="pills-login" aria-selected="true">Login</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a routerLink ="../createAccount" class="nav-link" id="tab-register" data-mdb-toggle="pill"  role="tab"
+        aria-controls="pills-register" aria-selected="false">Register</a>
+    </li>
+  </ul>
+
+  <!-- Pills content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <!-- id="UserId" -->
+          <input type="email"   class="form-control" required #ue/>
+          <label class="form-label" for="UserId" >User Email</label>
+        </div>
+  
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <!-- id="loginPassword" -->
+          <input type="password"   class="form-control"required #up/>
+          <label class="form-label" for="loginPassword">Password</label>
+        </div>
+        <!-- Submit button -->
+        <button (click)="storeUserData(ue.value, up.value)" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a routerLink ="../createAccount"> Register </a></p>
+        </div>
+      
+    </div>
+  </div>
+  </div>

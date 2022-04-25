@@ -1,0 +1,45 @@
+.container{
+    box-shadow: 0 16px 24px 2px rgba(31, 44, 190, 0.13), 0 6px 30px 5px rgba(255, 255, 255, 0.12), 0 8px 10px -5px rgba(255, 255, 255, 0.2);
+    border-radius: 2%;
+    padding: 10%;
+    
+}
+#datepicker, #h4{
+    margin-left: 10%;
+    color: #4450cb;
+    
+}
+#table{
+    width: 100%;
+    margin-top: 8%;
+    color: #4450cb;
+}
+
+tr{
+    color: #4450cb;
+    text-align: center;
+}
+.form-control, .form-select{
+    display: block;
+    width: 80%;
+    
+    padding: 10px;
+    line-height: 1.5;
+    color: #4450cb;
+    background-color: #fff;
+    border: 1px solid #4450cb63;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2%;
+
+}
+
+@media screen and (max-width: 600px){
+    .form-control , .form-select{
+        width: 100%;
+       
+
+    }
+    
+}

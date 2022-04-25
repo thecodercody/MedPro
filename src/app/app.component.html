@@ -1,0 +1,37 @@
+<nav class="topnav" id="myTopnav">
+ <ul>
+    <li><a routerLink ="/home">Home</a></li>
+    <li class="responsive"><a routerLink ="/about">About Us</a></li>
+    <li class="responsive"><a routerLink ="/contact">Contact</a></li>
+
+    <!-- <li class= "right" style="float: right;"><a routerLink ="/createAccount">Create an Account</a></li> -->
+    <li class= "right" style="float: right;"><a  routerLink ="/logIn">Log In</a></li>
+      
+  </ul>
+</nav> 
+
+<button class="open-button" onclick="openForm()">Support</button>
+
+<div class="chat-popup" id="myForm">
+  <form  class="form-container">
+    <h3>Support</h3>
+    <textarea id = "email" placeholder="Please enter your email" name="msg" required></textarea>
+    <textarea id = "message" placeholder="Message.." name="msg" required></textarea>
+
+    <button class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+
+</script>
+
+<router-outlet></router-outlet>

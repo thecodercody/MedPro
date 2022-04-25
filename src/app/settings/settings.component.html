@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <h3>Change Profile info</h3><br>
+            <p>*Please fill out all fields before submitting</p>
+            <br>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="registerName" class="form-control" value="{{_userService.dataService.firstName}}"
+                    required #updateFN />
+                <label class="form-label" for="registerName">First Name</label>
+            </div>
+
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="Lastname" class="form-control" value="{{_userService.dataService.lastName}}"
+                    required #updateLN />
+                <label class="form-label" for="registerUsername">Last Name</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="registerEmail" class="form-control" value="{{_userService.dataService.email}}"
+                    required #updateE />
+                <label class="form-label" for="registerEmail">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerPassword" class="form-control" #updateP required />
+                <label class="form-label" for="registerPassword">Password</label>
+            </div>
+            <!-- Submit button -->
+            <button (click)="updateData(updateFN.value, updateLN.value, updateE.value, updateP.value)"
+                class="btn btn-primary btn-block mb-3" id="save">Save changes</button>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container" id="container2">
+        <button (click)="deleteUserAccount()" id="delete" class="btn btn-danger">Delete account</button>
+</div>
