@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { UserDataService } from '../service/user-data.service';
 
 @Component({
@@ -61,7 +61,7 @@ export class AppointmentsComponent implements OnInit {
         (data) => {
           window.alert("Your appointment was created successfully!");
         }, (err) => {
-          window.alert("Something went wrong. Please try again");
+          window.alert("Time unavailable");
         }
       )
 
