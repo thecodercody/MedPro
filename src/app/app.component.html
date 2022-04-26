@@ -1,11 +1,11 @@
 <nav class="topnav" id="myTopnav">
  <ul>
     <li><a routerLink ="/home">Home</a></li>
-    <li class="responsive"><a routerLink ="/about">About Us</a></li>
+    <li class="responsive"><a routerLink ="/about">Gallery</a></li>
     <li class="responsive"><a routerLink ="/contact">Contact</a></li>
 
     <!-- <li class= "right" style="float: right;"><a routerLink ="/createAccount">Create an Account</a></li> -->
-    <li class= "right" style="float: right;"><a  routerLink ="/logIn">Log In</a></li>
+    <li class= "right" style="float: right;"><a  routerLink ="/logIn" *ngIf="!_userService.isLoginService">Log In</a></li>
       
   </ul>
 </nav> 

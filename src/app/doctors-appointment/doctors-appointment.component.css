@@ -1,0 +1,24 @@
+.container{
+    box-shadow: 0 16px 24px 2px rgba(31, 44, 190, 0.13), 0 6px 30px 5px rgba(255, 255, 255, 0.12), 0 8px 10px -5px rgba(255, 255, 255, 0.2);
+    border-radius: 2%;
+    padding: 10%;
+    
+}
+#div{
+    width: 90%;
+    border: 1px;
+    border: solid;
+    border-color: #4450cb2e;
+    padding: 2%;
+    margin: 3%;
+    color: #4450cb;
+}
+h2{
+    text-align: center;
+    color: #4450cb;
+}
+    
+p{
+    text-align: center;
+    font-size: large;
+}

@@ -12,7 +12,7 @@ export class LogInComponent implements OnInit {
   _userService: UserDataService;
   _router:Router;
   public userdata: any;
-  logIn: boolean = false;
+  // logIn: boolean = false;
   
 
   constructor(private _userServiceRef: UserDataService,private routerRef:Router) {
@@ -29,14 +29,12 @@ export class LogInComponent implements OnInit {
         if (this.userdata != null) {
           console.log("if works");
           console.log(this.userdata);
-          this.logIn = true;
-          console.log(this.logIn);
+          // this.logIn = true;
+          // console.log(this.logIn);
 
           this._userService.dataService = this.userdata;
-          this._userService.isLoginService = this.logIn;
+          this._userService.isLoginService = true;
           console.log(this._userService.dataService + "this one works");
-          
-          //window.location.href = '/portal/profile';
           this._router.navigateByUrl('/portal/profile');
         }// }else{
         //   window.alert("Smth went wrong");

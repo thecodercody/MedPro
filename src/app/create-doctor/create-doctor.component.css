@@ -5,23 +5,16 @@
     width: 90%;
     color: #2f3cc5;
 }
-#save{
-    background-color: #2f3cc5;
-}
-#delete{
+#nav {
+    
+    max-width: 80%;
     margin: auto;
-    display: block;
+    margin-top: 5%;
+   
+    
 }
-#container2{
-    width: 70%;
-    display: block;
-    margin: auto;
-    max-height: 100px;
-}
-h3{
-    font-weight: bold;
-    text-align: center;
-}
-p{
-    color: red;
+@media screen and (max-width: 600px){
+    #nav{
+        max-width: 70%;
+    }
 }

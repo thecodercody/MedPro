@@ -34,7 +34,14 @@ tr{
     border-radius: 2%;
 
 }
-
+td{
+    padding: 4%;
+    font-size: large;
+}
+th{
+    font-size:x-large;
+    padding-bottom: 4%;
+}
 @media screen and (max-width: 600px){
     .form-control , .form-select{
         width: 100%;

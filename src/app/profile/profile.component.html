@@ -5,12 +5,31 @@
             <div class="container"  >
                 <div class="row">
         	           <div class="profile">
+                       <ng-container>
 	                        <div class="avatar">
-                                <img id="img3" [src]="img3" alt="profile">  
-                            </div>
+                            <!-- <div *ngIf="userPic then img1; else img2" > -->
+                              
+                              
+                            <!-- </div> -->
+                            <ng-template [ngIf]="userPic">
+                              <img  src="{{img3}}" alt="patient" />
+                            </ng-template>
+                            <ng-template [ngIf]="!userPic"> 
+                            <img  src="{{img4}}" alt="doctor" />
+                            </ng-template>
+
+                          </div>
+                        </ng-container>
 	                        <div class="name" >
 	                            <h3 class="title"> {{_userService.dataService.firstName}}  {{_userService.dataService.lastName}} </h3>
-								<h6>Patient</h6>
+								              <ng-template [ngIf]="userPic">
+                              <h6>Patient</h6>
+                              </ng-template>
+                              <ng-template [ngIf]="!userPic">
+                                <h6>Doctor</h6>
+                              </ng-template> 
+
+
 								
 	                        </div>
 	                    </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {LogInComponent} from '../log-in/log-in.component';
 import { UserDataService } from '../service/user-data.service';
+
+
 
 
 @Component({
@@ -9,20 +10,29 @@ import { UserDataService } from '../service/user-data.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  img3:string = "../../assets/images/img3.jpg";
+  img3= "../../assets/images/img3.jpg";
+  img4="../../assets/images/img4.jpg";
 
   _userService:UserDataService;
- // userdatafromService:any;
+ userPic:any;
   
   
  constructor( _userServiceRef:UserDataService) { 
     this._userService=_userServiceRef;
 
   }
-  //userdata2:any= this._userService2.dataService;
+
+  profilePic(){
+    if(this._userService.dataService.role==1){
+      this.userPic=true;
+    }else{
+       this.userPic=false;
+    }
+  }
   
 
   ngOnInit(): void {
+     this.profilePic();
    // this.userdatafromService=this._userService.dataService;
    // console.log(this.userdatafromService);
   }

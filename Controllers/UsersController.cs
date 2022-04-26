@@ -1,4 +1,4 @@
-#nullable disable
+﻿#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +48,8 @@ namespace MedPro.Controllers
           var id = (from u in _context.Users where u.Email == email select u.UserId).First();
           var user = await _context.Users.FindAsync(id);
 
+          
+
           if (user == null)
           {
             return NotFound();
@@ -60,8 +62,19 @@ namespace MedPro.Controllers
           else return BadRequest("Wrong password, please try again");
         }
 
-    // PUT: api/Users/5
-    [HttpPut("{id}")]
+
+        [HttpGet("doc")]
+        public IActionResult GetDoc()
+        {
+            var doc = from c in _context.Users
+                      where c.Role == 2
+                      select c;
+            return Ok(doc);
+        }
+
+
+        // PUT: api/Users/5
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.UserId)

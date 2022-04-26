@@ -1,0 +1,14 @@
+.container{
+    box-shadow: 0 16px 24px 2px rgba(31, 44, 190, 0.13), 0 6px 30px 5px rgba(255, 255, 255, 0.12), 0 8px 10px -5px rgba(255, 255, 255, 0.2);
+    border-radius: 2%;
+    padding: 7%;
+    color: #4450cb;
+    
+}
+img{
+    width: 100%;
+    margin: 0;
+}
+*{
+    font-family: ui-monospace, serif;
+  }
